@@ -15,10 +15,26 @@ div {
     width: fit-content;
 }
 
-.danger {}
+.danger {
+    background-color: #ffdddd;
+}
 
-.success {}
+.success {
+    background-color: #ddffdd;
+}
 
-.info {}
+.info {
+    background-color: #e7f3fe;
+}
 
-.warning {}
+.warning {
+    background-color: #ffffcc;
+}
+
+.danger,
+.success,
+.info,
+.warning {
+    font-size: 1.2rem;
+    pading: 20px;
+}
