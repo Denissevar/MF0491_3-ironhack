@@ -1,5 +1,14 @@
 async function getPuzzle(wordCount) {
-    let hiddenSentence = "Buena Suerte";
+    try {
+        const response = await fetch(`https://puzzle.mead.io/puzzle?wordCount=${wordCount}`)
+    
+        if (!response.ok) {
+            throw new Error(`No se pudo obtener el puzzle`)
+        }
 
-    return hiddenSentence;
-}
+        const data = await response.json()
+        return data.puzzle
+    } catch (error) {
+        return `Error: ${error.message}`
+    }
+    }
