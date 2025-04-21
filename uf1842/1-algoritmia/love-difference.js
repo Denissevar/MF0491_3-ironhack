@@ -6,8 +6,10 @@
  * @return {number} La diferencia de edad, siempre un número positivo
  */
 
-function loveDifference(age1, age2) {
+const diferencia = age1 - age2;
 
+function loveDifference(age1, age2) {
+    return Math.abs(age1 - age2);
 }
 
 // Prueba 1: Diferencia básica
