@@ -5,29 +5,57 @@
 html {
     font-size: 16px;
 }
+ /*-- 9. media query */
+@media (min-width: 768px) {
 
 body {
     margin: 0;
     font-family: sans-serif;
     background: #f5f6f7;
+    background-image: url(raspitas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery img {
+    max-width: 300px;
+}
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .gallery img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
 }
 
 .header {
     text-align: center;
     text-transform: uppercase;
-    padding: 32px;
-    background-color: #d5d5df;
-    color: #fff;
+    padding: 1rem;
+    background-color: #222244;   /*-- 3. ajustar contraste */
+    color: white;
     border-bottom: 4px solid #fdb347;
 }
 
 .gallery {
     margin: 0 auto;
     padding: 20px 10px;
+    display: flex; /*-- 4. contenedor flexible */
+    flex-wrap: wrap;
+    width: auto; /*-- 8. flex-wrap: wrap y width:auto permites la distribucion horizontal cuando hay espacio */
+    gap: 1rem;  /*-- 6. elementos contenedor flexible separados 1rem */
+    justify-content: center; /*-- 7. elementos contenedor flexible alineados en el centro para el main axis */
 }
 
 .gallery img {
-    width: 100%;
+    width: 100%; /*-- 5. elementos contenedor flexible apilados verticalemnte en movil */
     max-width: 250px;
     height: 300px;
     object-fit: cover;
