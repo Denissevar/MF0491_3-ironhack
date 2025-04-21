@@ -22,6 +22,7 @@ body {
 }
 }
 
+/*-- 10. grid de 3 columnas */
 @media (min-width: 992px) {
     .gallery {
         display: grid;
